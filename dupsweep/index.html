@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DupSweep — Clean up duplicate & similar photos</title>
+<meta name="description" content="DupSweep finds duplicate and look-alike photos on your iPhone and iPad, suggests the best one to keep, and clears space with one tap. Private, on-device, no subscription.">
+<style>
+  :root{--ink:#13212e;--muted:#5b6775;--line:#e6eaf0;--accent:#1f7df6;--accent2:#2e9bf0;--bg:#ffffff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+  nav{display:flex;align-items:center;gap:18px;height:66px}
+  nav .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.15rem}
+  nav .brand img{width:34px;height:34px;border-radius:8px}
+  nav .links{margin-left:auto;display:flex;gap:22px;font-size:.95rem;font-weight:600}
+  nav .links a{color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#5dc2ff,#1574e0);color:#fff;padding:74px 0 90px;text-align:center}
+  .hero img.app{width:96px;height:96px;border-radius:22px;box-shadow:0 16px 40px rgba(10,40,80,.35);margin-bottom:22px}
+  .hero h1{font-size:2.6rem;line-height:1.15;letter-spacing:-.02em;margin-bottom:14px}
+  .hero p.sub{font-size:1.2rem;opacity:.95;max-width:620px;margin:0 auto 26px}
+  .badge{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;border-radius:13px;padding:12px 20px;font-weight:600}
+  .badge small{display:block;font-size:.7rem;opacity:.8;font-weight:500;line-height:1}
+  .note{font-size:.85rem;opacity:.85;margin-top:14px}
+  section{padding:70px 0}
+  h2{font-size:1.9rem;text-align:center;letter-spacing:-.01em;margin-bottom:10px}
+  .lede{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 44px}
+  .feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .feat{background:#f6f9fd;border:1px solid var(--line);border-radius:18px;padding:24px}
+  .feat .ic{width:46px;height:46px;border-radius:12px;background:#e7f0ff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:14px}
+  .feat h3{font-size:1.12rem;margin-bottom:6px}
+  .feat p{color:var(--muted);font-size:.96rem}
+  .shots{display:flex;gap:20px;overflow-x:auto;padding:8px 0 18px;scroll-snap-type:x mandatory}
+  .shots img{height:560px;border-radius:26px;box-shadow:0 14px 40px rgba(16,40,80,.16);scroll-snap-align:center;flex:none}
+  .pricing{background:#f6f9fd;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+  .price{font-size:2.4rem;font-weight:800;color:var(--accent)}
+  footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{margin:0 10px;font-weight:600}
+  @media(max-width:600px){.hero h1{font-size:2rem}.shots img{height:440px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <span class="brand"><img src="img/icon.png" alt="DupSweep"> DupSweep</span>
+      <span class="links">
+        <a href="#features">Features</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img class="app" src="img/icon.png" alt="DupSweep app icon">
+    <h1>Clean up duplicate &amp; similar photos</h1>
+    <p class="sub">DupSweep finds the photos quietly eating your storage, suggests the best one to keep, and clears the rest with a single tap.</p>
+    <a class="badge" href="[APP STORE URL]"><span style="font-size:1.5rem">&#63743;</span><span>Download on the<br><strong style="font-size:1rem">App Store</strong></span></a>
+    <p class="note">For iPhone &amp; iPad · iOS 18+ · Free to try</p>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Less clutter, more space</h2>
+    <p class="lede">Most camera rolls are full of accidental copies and long bursts of nearly the same shot. DupSweep clears them out — safely and privately.</p>
+    <div class="feats">
+      <div class="feat"><div class="ic">&#128203;</div><h3>Exact duplicates</h3><p>Finds byte-for-byte identical photos, even when the files have different names.</p></div>
+      <div class="feat"><div class="ic">&#128248;</div><h3>Similar series</h3><p>Groups the bursts of look-alike shots from the same moment so you can keep just one.</p></div>
+      <div class="feat"><div class="ic">&#11088;</div><h3>Best-shot suggestion</h3><p>On-device analysis suggests the sharpest, nicest photo to keep in each series.</p></div>
+      <div class="feat"><div class="ic">&#128274;</div><h3>Protect favourites</h3><p>Mark photos you never want deleted; they're kept safely in a separate list.</p></div>
+      <div class="feat"><div class="ic">&#128241;</div><h3>Private by design</h3><p>Everything happens on your device. Your photos are never uploaded. No ads, no trackers.</p></div>
+      <div class="feat"><div class="ic">&#9851;</div><h3>Safe &amp; reversible</h3><p>Nothing is deleted without your confirmation, and removed photos stay recoverable for 30 days.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>See it in action</h2>
+    <p class="lede">Scan free, preview what's eating your storage, and unlock unlimited cleanup with a one-time purchase.</p>
+    <div class="shots">
+      <img src="img/shot1.png" alt="Scan result">
+      <img src="img/shot2.png" alt="Review a series">
+      <img src="img/shot3.png" alt="Protected photos">
+      <img src="img/shot4.png" alt="Private by design">
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>Simple pricing</h2>
+    <p class="lede">Download and scan for free. Unlock unlimited cleanup once — no subscription, ever.</p>
+    <p class="price">&euro;8,99</p>
+    <p style="color:var(--muted)">one-time purchase</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Use</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="mailto:thekaliyugans@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:14px">&copy; 2026 Kali Yuga B.V.. DupSweep is not affiliated with Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>
