@@ -66,6 +66,21 @@ main.doc hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
 main.doc ul{padding-left:1.15rem}
 .crumbs{font-size:.88rem;color:var(--mute);margin-bottom:1.25rem}.crumbs a{color:var(--mute)}
 
+/* feedbackformulier */
+form.fb{display:grid;gap:1.1rem;max-width:40rem}
+form.fb label{display:block;font-weight:600;margin-bottom:.3rem}
+form.fb .hint{display:block;font-weight:400;color:var(--mute);font-size:.9rem;margin-top:.15rem}
+form.fb input[type=text],form.fb input[type=email],form.fb select,form.fb textarea{width:100%;font:inherit;
+  padding:.7rem .85rem;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--fg)}
+form.fb textarea{min-height:11rem;resize:vertical}
+form.fb .kind{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+form.fb .kind label{display:flex;gap:.6rem;align-items:flex-start;padding:.85rem .95rem;border:1px solid var(--line);
+  border-radius:14px;background:var(--card);font-weight:500;cursor:pointer}
+form.fb .kind input{margin-top:.25rem}
+form.fb .kind small{display:block;color:var(--mute);font-weight:400;font-size:.85rem}
+form.fb .only-bug{display:none}form.fb.is-bug .only-bug{display:block}
+form.fb .hp{position:absolute;left:-9999px}
+.thanks{background:var(--soft);border-radius:18px;padding:1.4rem 1.6rem;max-width:40rem}
 /* kaarten met schermafbeelding */
 .grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
 .card{flex-direction:row;padding:0;overflow:hidden;align-items:stretch}
@@ -98,6 +113,7 @@ main.doc ul{padding-left:1.15rem}
 <a class="brand" href="index.html"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4d4dc7"/><path d="M20 16h8v14l12-14h10L36 32l15 16H41L28 33v15h-8z" fill="#fff"/></svg><span>Kali Yuga</span></a>
 <ul><li><a href="index.html#apps">Apps</a></li>
 <li><a href="index.html#about">What we do</a></li>
+<li><a href="feedback.html">Feedback</a></li>
 <li><a href="legal.html">Legal</a></li>
 <li><a href="index.html#contact">Contact</a></li></ul>
 </div></nav><main class="doc">
@@ -113,9 +129,12 @@ fonts, scripts or images from third parties.</p>
 <p>The site is hosted in the Netherlands by <a href="https://mijn.host">mijn.host</a>. Like any
 web host, the hosting provider may record technical data such as your IP address in server logs
 for security purposes. We do not use that data.</p>
-<h2>Email</h2>
-<p>If you email us, we keep your message for as long as needed to answer it. We do not add you
-to any list.</p>
+<h2>Email and the feedback form</h2>
+<p>If you email us, your message lands in our mailbox. If you use the feedback form, your
+message is sent to our mailbox and also kept in a private inbox on our server that only we can
+read; it holds what you typed, plus the time it was sent. No IP addresses, no cookies, no
+tracking. We keep a message for as long as needed to answer it or fix the problem, and we do not
+add you to any list. An email address in the form is optional and only used to reply.</p>
 <h2>The apps</h2>
 <p>Each app has its own privacy policy — see <a href="legal.html">Legal</a>. In short: the apps
 run on your device and collect no personal data.</p>
@@ -133,9 +152,13 @@ lettertypen, scripts of afbeeldingen van derden geladen.</p>
 <p>De site wordt in Nederland gehost door <a href="https://mijn.host">mijn.host</a>. Zoals elke
 webhost kan de hostingpartij om veiligheidsredenen technische gegevens zoals je IP-adres in
 serverlogs vastleggen. Wij gebruiken die gegevens niet.</p>
-<h2>E-mail</h2>
-<p>Mail je ons, dan bewaren we je bericht zolang dat nodig is om het te beantwoorden. Je komt
-op geen enkele lijst.</p>
+<h2>E-mail en het feedbackformulier</h2>
+<p>Mail je ons, dan komt je bericht in onze mailbox. Gebruik je het feedbackformulier, dan
+gaat je bericht naar onze mailbox én in een afgeschermde inbox op onze server die alleen wij
+kunnen lezen; daarin staat wat je hebt getypt, plus het tijdstip. Geen IP-adressen, geen
+cookies, geen tracking. We bewaren een bericht zolang dat nodig is om te antwoorden of het
+probleem op te lossen, en je komt op geen enkele lijst. Een e-mailadres in het formulier is
+optioneel en alleen om te kunnen antwoorden.</p>
 <h2>De apps</h2>
 <p>Elke app heeft een eigen privacyverklaring — zie <a href="legal.html">Legal</a>. Kort gezegd:
 de apps werken op je toestel en verzamelen geen persoonsgegevens.</p>

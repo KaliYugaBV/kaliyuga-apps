@@ -66,6 +66,21 @@ main.doc hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
 main.doc ul{padding-left:1.15rem}
 .crumbs{font-size:.88rem;color:var(--mute);margin-bottom:1.25rem}.crumbs a{color:var(--mute)}
 
+/* feedbackformulier */
+form.fb{display:grid;gap:1.1rem;max-width:40rem}
+form.fb label{display:block;font-weight:600;margin-bottom:.3rem}
+form.fb .hint{display:block;font-weight:400;color:var(--mute);font-size:.9rem;margin-top:.15rem}
+form.fb input[type=text],form.fb input[type=email],form.fb select,form.fb textarea{width:100%;font:inherit;
+  padding:.7rem .85rem;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--fg)}
+form.fb textarea{min-height:11rem;resize:vertical}
+form.fb .kind{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+form.fb .kind label{display:flex;gap:.6rem;align-items:flex-start;padding:.85rem .95rem;border:1px solid var(--line);
+  border-radius:14px;background:var(--card);font-weight:500;cursor:pointer}
+form.fb .kind input{margin-top:.25rem}
+form.fb .kind small{display:block;color:var(--mute);font-weight:400;font-size:.85rem}
+form.fb .only-bug{display:none}form.fb.is-bug .only-bug{display:block}
+form.fb .hp{position:absolute;left:-9999px}
+.thanks{background:var(--soft);border-radius:18px;padding:1.4rem 1.6rem;max-width:40rem}
 /* kaarten met schermafbeelding */
 .grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
 .card{flex-direction:row;padding:0;overflow:hidden;align-items:stretch}
@@ -98,6 +113,7 @@ main.doc ul{padding-left:1.15rem}
 <a class="brand" href="../index.html"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4d4dc7"/><path d="M20 16h8v14l12-14h10L36 32l15 16H41L28 33v15h-8z" fill="#fff"/></svg><span>Kali Yuga</span></a>
 <ul><li><a href="../index.html#apps">Apps</a></li>
 <li><a href="../index.html#about">What we do</a></li>
+<li><a href="../feedback.html">Feedback</a></li>
 <li><a href="../legal.html">Legal</a></li>
 <li><a href="../index.html#contact">Contact</a></li></ul>
 </div></nav><main class="doc">
@@ -119,6 +135,9 @@ and small things tend to get fixed in the next update.</p>
   <li><b>Something broken, or a feature you'd like?</b> Email us. Small things usually get fixed quickly.</li>
   
 </ul>
+<h2>An idea, or something that should work differently?</h2>
+<p><a href="../feedback.html?app=KinBinder">Use the feedback box</a>. Ideas, gripes and bug reports all
+welcome; the more specific, the better.</p>
 <h2>Privacy and terms</h2>
 <p>See the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms of use</a>.</p>
 </section>
