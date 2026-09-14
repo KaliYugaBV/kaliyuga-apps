@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kali Yuga — small, honest iPhone apps</title>
-<meta name="description" content="Kali Yuga B.V. designs and publishes small, focused iPhone apps. Pay once, everything stays on your device, no accounts, no tracking.">
-<meta property="og:title" content="Kali Yuga — small, honest iPhone apps"><meta property="og:description" content="Kali Yuga B.V. designs and publishes small, focused iPhone apps. Pay once, everything stays on your device, no accounts, no tracking.">
+<title>Kali Yuga — iPhone apps you buy once</title>
+<meta name="description" content="Kali Yuga B.V. is a small app studio in Zwolle. We make iPhone utilities you buy once. No subscriptions, no accounts, and your data stays on your phone.">
+<meta property="og:title" content="Kali Yuga — iPhone apps you buy once"><meta property="og:description" content="Kali Yuga B.V. is a small app studio in Zwolle. We make iPhone utilities you buy once. No subscriptions, no accounts, and your data stays on your phone.">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Kali Yuga">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://kaliyuga-apps.nl/">
@@ -65,6 +65,34 @@ main.doc .lang{display:flex;gap:1rem;font-size:.9rem;margin-bottom:1.5rem}
 main.doc hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
 main.doc ul{padding-left:1.15rem}
 .crumbs{font-size:.88rem;color:var(--mute);margin-bottom:1.25rem}.crumbs a{color:var(--mute)}
+
+/* kaarten met schermafbeelding */
+.grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
+.card{flex-direction:row;padding:0;overflow:hidden;align-items:stretch}
+.card .txt{padding:1.15rem 1.1rem 1.1rem;flex:1;display:flex;flex-direction:column}
+.card .txt .links{margin-top:auto;padding-top:.6rem}
+.card .head{display:flex;align-items:center;gap:.7rem;margin-bottom:.45rem}
+.card .head img{width:40px;height:40px;border-radius:10px}
+.card .head b{margin:0;font-size:1.08rem}
+.card .shot{flex:none;width:132px;background:var(--soft);display:flex;align-items:flex-end;justify-content:center;padding:1.1rem .75rem 0}
+.card .shot img{width:112px;height:auto;display:block;border-radius:14px 14px 0 0;box-shadow:0 8px 24px rgba(20,20,60,.18);border:3px solid #1c1c22;border-bottom:0}
+.card .shot img.poster{border:0;border-radius:12px 12px 0 0}
+@media(max-width:400px){.card .shot{display:none}}
+/* hero met drie telefoons */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.phones{position:relative;height:420px}
+.phones img{position:absolute;width:190px;border-radius:22px;border:5px solid #1c1c22;box-shadow:0 20px 50px rgba(20,20,60,.25);background:#000}
+.phones img:nth-child(1){left:0;top:40px;transform:rotate(-6deg);z-index:1}
+.phones img:nth-child(2){left:110px;top:0;z-index:3}
+.phones img:nth-child(3){left:230px;top:56px;transform:rotate(6deg);z-index:2}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.phones{height:360px;max-width:420px;margin:0 auto}
+  .phones img{width:160px}.phones img:nth-child(2){left:95px}.phones img:nth-child(3){left:200px}}
+@media(max-width:480px){.phones{display:none}}
+.hero{background:radial-gradient(1200px 500px at 80% -10%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%)}
+.note{background:var(--soft);border-radius:18px;padding:1.4rem 1.6rem;max-width:62ch;line-height:1.7}
+.note p{margin:0 0 .9rem}.note p:last-child{margin:0}
+.support-shot{float:right;width:150px;margin:0 0 1rem 1.5rem;border-radius:16px;border:4px solid #1c1c22;box-shadow:0 10px 30px rgba(20,20,60,.2)}
+@media(max-width:560px){.support-shot{float:none;display:block;margin:0 auto 1.5rem}}
 </style></head>
 <body><nav class="top"><div class="wrap">
 <a class="brand" href="index.html"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4d4dc7"/><path d="M20 16h8v14l12-14h10L36 32l15 16H41L28 33v15h-8z" fill="#fff"/></svg><span>Kali Yuga</span></a>
@@ -74,70 +102,75 @@ main.doc ul{padding-left:1.15rem}
 <li><a href="index.html#contact">Contact</a></li></ul>
 </div></nav>
 <header class="hero"><div class="wrap">
-<p class="eyebrow">Kali Yuga B.V. · Zwolle, The Netherlands</p>
-<h1>Small, honest iPhone apps that do one job well.</h1>
-<p>We build focused utilities you pay for once. No subscriptions, no accounts, no tracking —
-your data stays on your iPhone.</p>
-<a class="btn" href="#apps">See the apps</a><a class="btn ghost" href="#about">How we work</a>
+<div>
+<p class="eyebrow">Kali Yuga B.V. · Zwolle</p>
+<h1>iPhone apps you buy once.</h1>
+<p>We're a small studio in Zwolle. We make apps for the kind of chore you'd rather not pay a
+monthly fee for: cleaning up photos, measuring a floor plan, splitting up the contents of a
+house. You try them for free, pay once if they earn it, and whatever you put in stays on your
+phone.</p>
+<a class="btn" href="#apps">Have a look at the apps</a><a class="btn ghost" href="#about">About us</a>
+</div>
+<div class="phones"><img src="guestkit/shot.jpg" alt=""><img src="textover/shot.jpg" alt=""><img src="fairloom/shot.jpg" alt=""></div>
 </div></header>
 
 <section id="apps"><div class="wrap">
-<p class="eyebrow">Apps</p>
-<h2>15 apps, one set of rules</h2>
-<p class="lead">Every app is free to try. A single in-app purchase unlocks the full app, forever.
-Each one has its own support page, privacy policy and terms of use.</p>
-<div class="grid"><div class="card"><img src="bandcast/icon.png" alt="" width="56" height="56"><div><b>Bandcast</b><p>Play your own music on Sonos and tune every speaker to the room.</p><div class="links"><a href="bandcast/support.html">Support</a><a href="bandcast/privacy.html">Privacy</a><a href="bandcast/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="belastingdossier/icon.png" alt="" width="56" height="56"><div><b>Belastingdossier</b><p>All your Dutch tax files in one place — on your iPhone, one-time purchase.</p><div class="links"><a href="belastingdossier/support.html">Support</a><a href="belastingdossier/privacy.html">Privacy</a><a href="belastingdossier/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="bubblebound/icon.png" alt="" width="56" height="56"><div><b>Bubblebound</b><p>Turn a chat export into a beautiful PDF book, right on your phone.</p><div class="links"><a href="bubblebound/support.html">Support</a><a href="bubblebound/privacy.html">Privacy</a><a href="bubblebound/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="colorplate/icon.png" alt="" width="56" height="56"><div><b>Colorplate</b><p>Turn any photo into a printable coloring page.</p><div class="links"><a href="colorplate/support.html">Support</a><a href="colorplate/privacy.html">Privacy</a><a href="colorplate/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="dupsweep/icon.png" alt="" width="56" height="56"><div><b>DupSweep</b><p>Find duplicate and look-alike photos and clean them up in one tap.</p><div class="links"><a href="dupsweep/support.html">Support</a><a href="dupsweep/privacy.html">Privacy</a><a href="dupsweep/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="fairloom/icon.png" alt="" width="56" height="56"><div><b>Fairloom</b><p>Divide belongings fairly — one iPhone, no accounts.</p><div class="links"><a href="fairloom/support.html">Support</a><a href="fairloom/privacy.html">Privacy</a><a href="fairloom/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="guestkit/icon.png" alt="" width="56" height="56"><div><b>GuestKit</b><p>The guest welcome book for your holiday rental.</p><div class="links"><a href="guestkit/support.html">Support</a><a href="guestkit/privacy.html">Privacy</a><a href="guestkit/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="jobbinder/icon.png" alt="" width="56" height="56"><div><b>JobBinder</b><p>Job photos in, client-ready PDF report out.</p><div class="links"><a href="jobbinder/support.html">Support</a><a href="jobbinder/privacy.html">Privacy</a><a href="jobbinder/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="keepory/icon.png" alt="" width="56" height="56"><div><b>Keepory</b><p>Document your home for insurance, entirely on device.</p><div class="links"><a href="keepory/support.html">Support</a><a href="keepory/privacy.html">Privacy</a><a href="keepory/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="kinbinder/icon.png" alt="" width="56" height="56"><div><b>KinBinder</b><p>The emergency binder your family can actually use.</p><div class="links"><a href="kinbinder/support.html">Support</a><a href="kinbinder/privacy.html">Privacy</a><a href="kinbinder/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="plantape/icon.png" alt="" width="56" height="56"><div><b>PlanTape</b><p>Measure PDF building plans on your iPhone.</p><div class="links"><a href="plantape/support.html">Support</a><a href="plantape/privacy.html">Privacy</a><a href="plantape/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="stackpdf/icon.png" alt="" width="56" height="56"><div><b>StackPDF</b><p>Merge, reorder and clean up PDFs on device.</p><div class="links"><a href="stackpdf/support.html">Support</a><a href="stackpdf/privacy.html">Privacy</a><a href="stackpdf/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="stoply/icon.png" alt="" width="56" height="56"><div><b>Stoply</b><p>Multi-stop routes in the smartest order.</p><div class="links"><a href="stoply/support.html">Support</a><a href="stoply/privacy.html">Privacy</a><a href="stoply/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="sunshift/icon.png" alt="" width="56" height="56"><div><b>SunShift</b><p>Beat jet lag with light — pay once, fly forever.</p><div class="links"><a href="sunshift/support.html">Support</a><a href="sunshift/privacy.html">Privacy</a><a href="sunshift/terms.html">Terms</a></div></div></div>
-<div class="card"><img src="textover/icon.png" alt="" width="56" height="56"><div><b>Textover</b><p>Automatic captions, made on your iPhone.</p><div class="links"><a href="textover/support.html">Support</a><a href="textover/privacy.html">Privacy</a><a href="textover/terms.html">Terms</a></div></div></div></div>
+<p class="eyebrow">The apps</p>
+<h2>15 of them so far</h2>
+<p class="lead">All free to download and try. Each has a single in-app purchase that unlocks
+everything, and each has its own support page, privacy policy and terms of use.</p>
+<div class="grid"><div class="card"><div class="txt"><div class="head"><img src="bandcast/icon.png" alt="" width="40" height="40"><b>Bandcast</b></div><p>Plays the music on your phone through your Sonos speakers, with a proper EQ per room.</p><div class="links"><a href="bandcast/support.html">Support</a><a href="bandcast/privacy.html">Privacy</a><a href="bandcast/terms.html">Terms</a></div></div><div class="shot"><img src="bandcast/shot.jpg" alt="Screenshot of Bandcast" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="belastingdossier/icon.png" alt="" width="40" height="40"><b>Belastingdossier</b></div><p>Ten small Dutch tax tools in one place. For when you need the answer, not a course.</p><div class="links"><a href="belastingdossier/support.html">Support</a><a href="belastingdossier/privacy.html">Privacy</a><a href="belastingdossier/terms.html">Terms</a></div></div><div class="shot"><img src="belastingdossier/shot.jpg" alt="Screenshot of Belastingdossier" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="bubblebound/icon.png" alt="" width="40" height="40"><b>Bubblebound</b></div><p>Export a WhatsApp chat, get back a book. Photos and all.</p><div class="links"><a href="bubblebound/support.html">Support</a><a href="bubblebound/privacy.html">Privacy</a><a href="bubblebound/terms.html">Terms</a></div></div><div class="shot"><img src="bubblebound/shot.jpg" alt="Screenshot of Bubblebound" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="colorplate/icon.png" alt="" width="40" height="40"><b>Colorplate</b></div><p>Turns a photo into a coloring page you can actually print.</p><div class="links"><a href="colorplate/support.html">Support</a><a href="colorplate/privacy.html">Privacy</a><a href="colorplate/terms.html">Terms</a></div></div><div class="shot"><img src="colorplate/shot.jpg" alt="Screenshot of Colorplate" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="dupsweep/icon.png" alt="" width="40" height="40"><b>DupSweep</b></div><p>Finds the near-identical photos in your library and lets you keep the good one.</p><div class="links"><a href="dupsweep/support.html">Support</a><a href="dupsweep/privacy.html">Privacy</a><a href="dupsweep/terms.html">Terms</a></div></div><div class="shot"><img src="dupsweep/shot.jpg" alt="Screenshot of DupSweep" loading="lazy" class="poster"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="fairloom/icon.png" alt="" width="40" height="40"><b>Fairloom</b></div><p>Splitting up belongings after a move, a divorce or a death, without a fight.</p><div class="links"><a href="fairloom/support.html">Support</a><a href="fairloom/privacy.html">Privacy</a><a href="fairloom/terms.html">Terms</a></div></div><div class="shot"><img src="fairloom/shot.jpg" alt="Screenshot of Fairloom" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="guestkit/icon.png" alt="" width="40" height="40"><b>GuestKit</b></div><p>A welcome book for your holiday rental that guests will really read.</p><div class="links"><a href="guestkit/support.html">Support</a><a href="guestkit/privacy.html">Privacy</a><a href="guestkit/terms.html">Terms</a></div></div><div class="shot"><img src="guestkit/shot.jpg" alt="Screenshot of GuestKit" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="jobbinder/icon.png" alt="" width="40" height="40"><b>JobBinder</b></div><p>Before-and-after photos from a job, turned into a report your client can open.</p><div class="links"><a href="jobbinder/support.html">Support</a><a href="jobbinder/privacy.html">Privacy</a><a href="jobbinder/terms.html">Terms</a></div></div><div class="shot"><img src="jobbinder/shot.jpg" alt="Screenshot of JobBinder" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="keepory/icon.png" alt="" width="40" height="40"><b>Keepory</b></div><p>Walk through your home once, room by room, and have a list your insurer will accept.</p><div class="links"><a href="keepory/support.html">Support</a><a href="keepory/privacy.html">Privacy</a><a href="keepory/terms.html">Terms</a></div></div><div class="shot"><img src="keepory/shot.jpg" alt="Screenshot of Keepory" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="kinbinder/icon.png" alt="" width="40" height="40"><b>KinBinder</b></div><p>The one document your family needs when something happens to you.</p><div class="links"><a href="kinbinder/support.html">Support</a><a href="kinbinder/privacy.html">Privacy</a><a href="kinbinder/terms.html">Terms</a></div></div><div class="shot"><img src="kinbinder/shot.jpg" alt="Screenshot of KinBinder" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="plantape/icon.png" alt="" width="40" height="40"><b>PlanTape</b></div><p>Measure distances and areas on a PDF floor plan, on site, without a laptop.</p><div class="links"><a href="plantape/support.html">Support</a><a href="plantape/privacy.html">Privacy</a><a href="plantape/terms.html">Terms</a></div></div><div class="shot"><img src="plantape/shot.jpg" alt="Screenshot of PlanTape" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="stackpdf/icon.png" alt="" width="40" height="40"><b>StackPDF</b></div><p>Merge, reorder, split. The PDF chores, done on the phone.</p><div class="links"><a href="stackpdf/support.html">Support</a><a href="stackpdf/privacy.html">Privacy</a><a href="stackpdf/terms.html">Terms</a></div></div><div class="shot"><img src="stackpdf/shot.jpg" alt="Screenshot of StackPDF" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="stoply/icon.png" alt="" width="40" height="40"><b>Stoply</b></div><p>Type in your stops, get them back in a sensible order.</p><div class="links"><a href="stoply/support.html">Support</a><a href="stoply/privacy.html">Privacy</a><a href="stoply/terms.html">Terms</a></div></div><div class="shot"><img src="stoply/shot.jpg" alt="Screenshot of Stoply" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="sunshift/icon.png" alt="" width="40" height="40"><b>SunShift</b></div><p>A light schedule for your flight, so the jet lag is shorter than the trip.</p><div class="links"><a href="sunshift/support.html">Support</a><a href="sunshift/privacy.html">Privacy</a><a href="sunshift/terms.html">Terms</a></div></div><div class="shot"><img src="sunshift/shot.jpg" alt="Screenshot of SunShift" loading="lazy"></div></div>
+<div class="card"><div class="txt"><div class="head"><img src="textover/icon.png" alt="" width="40" height="40"><b>Textover</b></div><p>Captions on your video, generated on the phone. Nothing gets uploaded.</p><div class="links"><a href="textover/support.html">Support</a><a href="textover/privacy.html">Privacy</a><a href="textover/terms.html">Terms</a></div></div><div class="shot"><img src="textover/shot.jpg" alt="Screenshot of Textover" loading="lazy"></div></div></div>
 </div></section>
 
 <section id="about"><div class="wrap">
-<p class="eyebrow">What we do</p>
-<h2>An independent app studio in Zwolle</h2>
-<p class="lead">Kali Yuga B.V. designs, builds and publishes utility apps for iPhone: turning
-photos into coloring pages, cleaning up duplicate pictures, measuring building plans, keeping a
-family emergency binder. Different jobs, the same three promises.</p>
-<div class="three">
-<div><span class="num">1</span><h3>Pay once</h3><p>No subscriptions and no accounts. Try the app
-for free, unlock it with one purchase, and it's yours.</p></div>
-<div><span class="num">2</span><h3>Your data stays yours</h3><p>Everything runs on your iPhone.
-We have no servers, no analytics and no ads — there is simply nothing to collect.</p></div>
-<div><span class="num">3</span><h3>Made to be understood</h3><p>Each app does one thing and
-explains what it did. The result is something you can check, export and keep.</p></div>
+<p class="eyebrow">About us</p>
+<h2>Why these apps exist</h2>
+<div class="note">
+<p>Most of them started with a small annoyance. You want to do one thing, once: turn a photo into
+a coloring page for a rainy afternoon, put the stops of a delivery round in a sensible order,
+make a list of what's in the house before the insurer asks. And the app you find wants an
+account, a subscription, and your photo library on somebody's server.</p>
+<p>So we build the version we wanted instead. One job per app. A price you pay once. And
+nothing leaves the phone, because the app has no server to send it to. That last part isn't a
+policy, it's how they're built. There's no analytics library in there, no ad network, no
+sign-up screen. If you delete the app, the data goes with it.</p>
+<p>Kali Yuga B.V. is registered in Zwolle, the Netherlands. The apps are made here, the support
+mail is read here, and if something is broken you'll usually hear back within a day or two.</p>
 </div>
 </div></section>
 
 <section id="legal-summary"><div class="wrap">
 <p class="eyebrow">Legal</p>
-<h2>Privacy and terms, per app</h2>
-<p class="lead">Every app has its own privacy policy and terms of use, in English and Dutch.
-Neither our apps nor this website collect personal data.</p>
+<h2>The fine print, per app</h2>
+<p class="lead">Every app has its own privacy policy and terms of use, in English and in Dutch.
+They are short, because there isn't much to say when nothing is collected.</p>
 <a class="btn ghost" style="margin-left:0" href="legal.html">All legal documents</a>
 </div></section>
 
 <section id="contact"><div class="wrap">
 <p class="eyebrow">Contact</p>
 <h2>Get in touch</h2>
-<p class="lead">For help with a specific app, use that app's support page — or the feedback
-button inside the app. For everything else:</p>
+<p class="lead">Something not working, or an idea for one of the apps? Use the support page of
+that app, or the feedback button inside it. For anything else, mail us.</p>
 <dl class="vcard">
 <dt>Company</dt><dd>Kali Yuga B.V.</dd>
 <dt>Email</dt><dd><a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a></dd>
 <dt>Address</dt><dd>Buserpad 8, 8011 KZ Zwolle, The Netherlands</dd>
 <dt>Chamber of Commerce</dt><dd>KvK 42134294</dd>
-<dt>Website</dt><dd><a href="https://kaliyuga-apps.nl">kaliyuga-apps.nl</a></dd>
 </dl>
 </div></section>
 <footer class="site"><div class="wrap">
