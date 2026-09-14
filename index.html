@@ -1,41 +1,147 @@
 <!doctype html>
-<html lang="nl"><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kali Yuga — apps</title><style>
-:root { color-scheme: light dark; }
-* { box-sizing: border-box; }
-body { margin:0; padding:2.5rem 1.25rem; font:16px/1.65 -apple-system,BlinkMacSystemFont,
-       "Segoe UI",Roboto,sans-serif; max-width:44rem; margin-inline:auto;
-       color:#16161a; background:#fbfbfd; }
-@media (prefers-color-scheme: dark){ body{ color:#ececf1; background:#0f0f12; } }
-h1 { font-size:1.7rem; margin:0 0 .25rem; letter-spacing:-.02em; }
-h2 { font-size:1.15rem; margin:2rem 0 .5rem; }
-.tag { color:#6b6b76; margin:0 0 2rem; }
-a { color:#3a6df0; }
-ul { padding-left:1.1rem; }
-.card { display:block; padding:1rem 1.1rem; margin:.5rem 0; border-radius:12px;
-        border:1px solid rgba(128,128,128,.25); text-decoration:none; color:inherit; }
-.card:hover { border-color:#3a6df0; }
-.card b { display:block; }
-.card small { color:#6b6b76; }
-footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid rgba(128,128,128,.25);
-         color:#6b6b76; font-size:.9rem; }
-</style></head><body>
-<h1>Kali Yuga</h1>
-<p class="tag">Kleine, eerlijke iPhone-apps. Eenmalig betalen, alles op je toestel, geen account.</p>
-<a class="card" href="bandcast/support.html"><b>Bandcast</b><small>Speel je eigen muziek en stem elke speaker af — werkt met Sonos</small></a>
-<a class="card" href="belastingdossier/support.html"><b>Belastingdossier</b><small>Al je Nederlandse belastingdossiers in één app — op je iPhone, eenmalig</small></a>
-<a class="card" href="bubblebound/support.html"><b>Bubblebound</b><small>Turn a chat export into a beautiful PDF book — right on your phone</small></a>
-<a class="card" href="colorplate/support.html"><b>Colorplate</b><small>Turn photos into coloring pages — pay once</small></a>
-<a class="card" href="fairloom/support.html"><b>Fairloom</b><small>Divide belongings fairly — one iPhone, no accounts</small></a>
-<a class="card" href="guestkit/support.html"><b>GuestKit</b><small>The guest welcome book for your rental — no subscription</small></a>
-<a class="card" href="jobbinder/support.html"><b>JobBinder</b><small>Job photos in, client-ready PDF report out — no subscription, no account</small></a>
-<a class="card" href="keepory/support.html"><b>Keepory</b><small>Document your home for insurance — on device, one-time purchase</small></a>
-<a class="card" href="kinbinder/support.html"><b>KinBinder</b><small>The emergency binder your family can actually use</small></a>
-<a class="card" href="plantape/support.html"><b>PlanTape</b><small>Measure PDF plans on your iPhone — no subscription</small></a>
-<a class="card" href="stackpdf/support.html"><b>StackPDF</b><small>Merge, reorder and clean up PDFs — on device, one-time purchase</small></a>
-<a class="card" href="stoply/support.html"><b>Stoply</b><small>Multi-stop routes in the smartest order — no subscription</small></a>
-<a class="card" href="sunshift/support.html"><b>SunShift</b><small>Beat jet lag with light — pay once, fly forever</small></a>
-<a class="card" href="textover/support.html"><b>Textover</b><small>Auto captions made on your iPhone — no subscription</small></a>
-<a class="card" href="dupsweep/support.html"><b>DupSweep</b><small>Vind dubbele foto&#x27;s en ruim ze op — alles op je iPhone</small></a>
-<footer>Support en privacy per app hierboven.</footer></body></html>
+<title>Kali Yuga — small, honest iPhone apps</title>
+<meta name="description" content="Kali Yuga B.V. designs and publishes small, focused iPhone apps. Pay once, everything stays on your device, no accounts, no tracking.">
+<meta property="og:title" content="Kali Yuga — small, honest iPhone apps"><meta property="og:description" content="Kali Yuga B.V. designs and publishes small, focused iPhone apps. Pay once, everything stays on your device, no accounts, no tracking.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kali Yuga">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kaliyuga-apps.nl/">
+<style>
+:root{--bg:#fbfbfd;--fg:#15151a;--mute:#5f6068;--line:rgba(20,20,40,.1);--card:#fff;
+  --accent:#4d4dc7;--accent-2:#6a6ae0;--soft:#eef0fb;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0e0e12;--fg:#ececf1;--mute:#9a9ba6;
+  --line:rgba(255,255,255,.1);--card:#17171d;--soft:#1b1b2a}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,
+  Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav.top{position:sticky;top:0;z-index:9;backdrop-filter:saturate(180%) blur(12px);
+  background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--fg);letter-spacing:-.01em}
+.brand svg{width:28px;height:28px}
+nav.top ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav.top li a{color:var(--fg);font-size:.95rem}
+@media(max-width:640px){nav.top ul{gap:.9rem}nav.top li a{font-size:.85rem}.brand span{display:none}}
+.hero{padding:5.5rem 0 4rem}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 1rem;max-width:22ch}
+.hero p{font-size:1.2rem;color:var(--mute);max-width:52ch;margin:0 0 1.75rem}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:999px;background:var(--accent);
+  color:#fff;font-weight:600}.btn:hover{background:var(--accent-2);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line);margin-left:.5rem}
+section{padding:3.5rem 0}section+section{border-top:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin:0 0 .4rem}
+h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 .5rem}
+.lead{color:var(--mute);font-size:1.08rem;max-width:60ch;margin:0 0 2rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.15rem;
+  display:flex;gap:.95rem;align-items:flex-start;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card img{width:56px;height:56px;border-radius:14px;flex:none;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.card b{display:block;font-size:1.05rem;margin-bottom:.15rem}
+.card p{margin:0 0 .55rem;color:var(--mute);font-size:.94rem}
+.card .links a{font-size:.86rem;margin-right:.8rem}
+.three{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.three div{background:var(--soft);border-radius:18px;padding:1.4rem}
+.three h3{margin:.2rem 0 .4rem;font-size:1.1rem}.three p{margin:0;color:var(--mute)}
+.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:700;font-size:.9rem}
+dl.vcard{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.25rem;margin:0}
+dl.vcard dt{color:var(--mute)}dl.vcard dd{margin:0}
+table.legal{width:100%;border-collapse:collapse;font-size:.95rem}
+table.legal th,table.legal td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line)}
+table.legal th{color:var(--mute);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+footer.site{border-top:1px solid var(--line);padding:2rem 0;color:var(--mute);font-size:.9rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between}
+/* document-pagina's (support / privacy / terms) */
+main.doc{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+main.doc h1{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 .3rem}
+main.doc h2{font-size:1.2rem;margin:2rem 0 .5rem}
+main.doc h3{font-size:1.02rem;margin:1.4rem 0 .3rem}
+main.doc .tag{color:var(--mute);margin:0 0 1.5rem}
+main.doc .lang{display:flex;gap:1rem;font-size:.9rem;margin-bottom:1.5rem}
+main.doc hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+main.doc ul{padding-left:1.15rem}
+.crumbs{font-size:.88rem;color:var(--mute);margin-bottom:1.25rem}.crumbs a{color:var(--mute)}
+</style></head>
+<body><nav class="top"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4d4dc7"/><path d="M20 16h8v14l12-14h10L36 32l15 16H41L28 33v15h-8z" fill="#fff"/></svg><span>Kali Yuga</span></a>
+<ul><li><a href="index.html#apps">Apps</a></li>
+<li><a href="index.html#about">What we do</a></li>
+<li><a href="legal.html">Legal</a></li>
+<li><a href="index.html#contact">Contact</a></li></ul>
+</div></nav>
+<header class="hero"><div class="wrap">
+<p class="eyebrow">Kali Yuga B.V. · Zwolle, The Netherlands</p>
+<h1>Small, honest iPhone apps that do one job well.</h1>
+<p>We build focused utilities you pay for once. No subscriptions, no accounts, no tracking —
+your data stays on your iPhone.</p>
+<a class="btn" href="#apps">See the apps</a><a class="btn ghost" href="#about">How we work</a>
+</div></header>
+
+<section id="apps"><div class="wrap">
+<p class="eyebrow">Apps</p>
+<h2>15 apps, one set of rules</h2>
+<p class="lead">Every app is free to try. A single in-app purchase unlocks the full app, forever.
+Each one has its own support page, privacy policy and terms of use.</p>
+<div class="grid"><div class="card"><img src="bandcast/icon.png" alt="" width="56" height="56"><div><b>Bandcast</b><p>Play your own music on Sonos and tune every speaker to the room.</p><div class="links"><a href="bandcast/support.html">Support</a><a href="bandcast/privacy.html">Privacy</a><a href="bandcast/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="belastingdossier/icon.png" alt="" width="56" height="56"><div><b>Belastingdossier</b><p>All your Dutch tax files in one place — on your iPhone, one-time purchase.</p><div class="links"><a href="belastingdossier/support.html">Support</a><a href="belastingdossier/privacy.html">Privacy</a><a href="belastingdossier/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="bubblebound/icon.png" alt="" width="56" height="56"><div><b>Bubblebound</b><p>Turn a chat export into a beautiful PDF book, right on your phone.</p><div class="links"><a href="bubblebound/support.html">Support</a><a href="bubblebound/privacy.html">Privacy</a><a href="bubblebound/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="colorplate/icon.png" alt="" width="56" height="56"><div><b>Colorplate</b><p>Turn any photo into a printable coloring page.</p><div class="links"><a href="colorplate/support.html">Support</a><a href="colorplate/privacy.html">Privacy</a><a href="colorplate/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="dupsweep/icon.png" alt="" width="56" height="56"><div><b>DupSweep</b><p>Find duplicate and look-alike photos and clean them up in one tap.</p><div class="links"><a href="dupsweep/support.html">Support</a><a href="dupsweep/privacy.html">Privacy</a><a href="dupsweep/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="fairloom/icon.png" alt="" width="56" height="56"><div><b>Fairloom</b><p>Divide belongings fairly — one iPhone, no accounts.</p><div class="links"><a href="fairloom/support.html">Support</a><a href="fairloom/privacy.html">Privacy</a><a href="fairloom/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="guestkit/icon.png" alt="" width="56" height="56"><div><b>GuestKit</b><p>The guest welcome book for your holiday rental.</p><div class="links"><a href="guestkit/support.html">Support</a><a href="guestkit/privacy.html">Privacy</a><a href="guestkit/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="jobbinder/icon.png" alt="" width="56" height="56"><div><b>JobBinder</b><p>Job photos in, client-ready PDF report out.</p><div class="links"><a href="jobbinder/support.html">Support</a><a href="jobbinder/privacy.html">Privacy</a><a href="jobbinder/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="keepory/icon.png" alt="" width="56" height="56"><div><b>Keepory</b><p>Document your home for insurance, entirely on device.</p><div class="links"><a href="keepory/support.html">Support</a><a href="keepory/privacy.html">Privacy</a><a href="keepory/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="kinbinder/icon.png" alt="" width="56" height="56"><div><b>KinBinder</b><p>The emergency binder your family can actually use.</p><div class="links"><a href="kinbinder/support.html">Support</a><a href="kinbinder/privacy.html">Privacy</a><a href="kinbinder/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="plantape/icon.png" alt="" width="56" height="56"><div><b>PlanTape</b><p>Measure PDF building plans on your iPhone.</p><div class="links"><a href="plantape/support.html">Support</a><a href="plantape/privacy.html">Privacy</a><a href="plantape/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="stackpdf/icon.png" alt="" width="56" height="56"><div><b>StackPDF</b><p>Merge, reorder and clean up PDFs on device.</p><div class="links"><a href="stackpdf/support.html">Support</a><a href="stackpdf/privacy.html">Privacy</a><a href="stackpdf/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="stoply/icon.png" alt="" width="56" height="56"><div><b>Stoply</b><p>Multi-stop routes in the smartest order.</p><div class="links"><a href="stoply/support.html">Support</a><a href="stoply/privacy.html">Privacy</a><a href="stoply/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="sunshift/icon.png" alt="" width="56" height="56"><div><b>SunShift</b><p>Beat jet lag with light — pay once, fly forever.</p><div class="links"><a href="sunshift/support.html">Support</a><a href="sunshift/privacy.html">Privacy</a><a href="sunshift/terms.html">Terms</a></div></div></div>
+<div class="card"><img src="textover/icon.png" alt="" width="56" height="56"><div><b>Textover</b><p>Automatic captions, made on your iPhone.</p><div class="links"><a href="textover/support.html">Support</a><a href="textover/privacy.html">Privacy</a><a href="textover/terms.html">Terms</a></div></div></div></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<p class="eyebrow">What we do</p>
+<h2>An independent app studio in Zwolle</h2>
+<p class="lead">Kali Yuga B.V. designs, builds and publishes utility apps for iPhone: turning
+photos into coloring pages, cleaning up duplicate pictures, measuring building plans, keeping a
+family emergency binder. Different jobs, the same three promises.</p>
+<div class="three">
+<div><span class="num">1</span><h3>Pay once</h3><p>No subscriptions and no accounts. Try the app
+for free, unlock it with one purchase, and it's yours.</p></div>
+<div><span class="num">2</span><h3>Your data stays yours</h3><p>Everything runs on your iPhone.
+We have no servers, no analytics and no ads — there is simply nothing to collect.</p></div>
+<div><span class="num">3</span><h3>Made to be understood</h3><p>Each app does one thing and
+explains what it did. The result is something you can check, export and keep.</p></div>
+</div>
+</div></section>
+
+<section id="legal-summary"><div class="wrap">
+<p class="eyebrow">Legal</p>
+<h2>Privacy and terms, per app</h2>
+<p class="lead">Every app has its own privacy policy and terms of use, in English and Dutch.
+Neither our apps nor this website collect personal data.</p>
+<a class="btn ghost" style="margin-left:0" href="legal.html">All legal documents</a>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<p class="eyebrow">Contact</p>
+<h2>Get in touch</h2>
+<p class="lead">For help with a specific app, use that app's support page — or the feedback
+button inside the app. For everything else:</p>
+<dl class="vcard">
+<dt>Company</dt><dd>Kali Yuga B.V.</dd>
+<dt>Email</dt><dd><a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a></dd>
+<dt>Address</dt><dd>Buserpad 8, 8011 KZ Zwolle, The Netherlands</dd>
+<dt>Chamber of Commerce</dt><dd>KvK 42134294</dd>
+<dt>Website</dt><dd><a href="https://kaliyuga-apps.nl">kaliyuga-apps.nl</a></dd>
+</dl>
+</div></section>
+<footer class="site"><div class="wrap">
+<span>© 2026 Kali Yuga B.V. · 8011 KZ Zwolle, The Netherlands · KvK 42134294</span>
+<span><a href="legal.html">Legal</a> · <a href="privacy.html">Website privacy</a>
+· <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a></span>
+</div></footer></body></html>

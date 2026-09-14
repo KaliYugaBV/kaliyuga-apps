@@ -1,32 +1,109 @@
 <!doctype html>
-<html lang="nl"><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>StackPDF — Privacy</title><style>
-:root { color-scheme: light dark; }
-* { box-sizing: border-box; }
-body { margin:0; padding:2.5rem 1.25rem; font:16px/1.65 -apple-system,BlinkMacSystemFont,
-       "Segoe UI",Roboto,sans-serif; max-width:44rem; margin-inline:auto;
-       color:#16161a; background:#fbfbfd; }
-@media (prefers-color-scheme: dark){ body{ color:#ececf1; background:#0f0f12; } }
-h1 { font-size:1.7rem; margin:0 0 .25rem; letter-spacing:-.02em; }
-h2 { font-size:1.15rem; margin:2rem 0 .5rem; }
-.tag { color:#6b6b76; margin:0 0 2rem; }
-a { color:#3a6df0; }
-ul { padding-left:1.1rem; }
-.card { display:block; padding:1rem 1.1rem; margin:.5rem 0; border-radius:12px;
-        border:1px solid rgba(128,128,128,.25); text-decoration:none; color:inherit; }
-.card:hover { border-color:#3a6df0; }
-.card b { display:block; }
-.card small { color:#6b6b76; }
-footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid rgba(128,128,128,.25);
-         color:#6b6b76; font-size:.9rem; }
+<title>StackPDF — Privacy Policy</title>
+<meta name="description" content="StackPDF — Privacy Policy. Merge, reorder and clean up PDFs on device.">
+<meta property="og:title" content="StackPDF — Privacy Policy"><meta property="og:description" content="StackPDF — Privacy Policy. Merge, reorder and clean up PDFs on device.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kali Yuga">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kaliyuga-apps.nl/stackpdf/privacy.html">
+<style>
+:root{--bg:#fbfbfd;--fg:#15151a;--mute:#5f6068;--line:rgba(20,20,40,.1);--card:#fff;
+  --accent:#4d4dc7;--accent-2:#6a6ae0;--soft:#eef0fb;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0e0e12;--fg:#ececf1;--mute:#9a9ba6;
+  --line:rgba(255,255,255,.1);--card:#17171d;--soft:#1b1b2a}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,
+  Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav.top{position:sticky;top:0;z-index:9;backdrop-filter:saturate(180%) blur(12px);
+  background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--fg);letter-spacing:-.01em}
+.brand svg{width:28px;height:28px}
+nav.top ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav.top li a{color:var(--fg);font-size:.95rem}
+@media(max-width:640px){nav.top ul{gap:.9rem}nav.top li a{font-size:.85rem}.brand span{display:none}}
+.hero{padding:5.5rem 0 4rem}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 1rem;max-width:22ch}
+.hero p{font-size:1.2rem;color:var(--mute);max-width:52ch;margin:0 0 1.75rem}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:999px;background:var(--accent);
+  color:#fff;font-weight:600}.btn:hover{background:var(--accent-2);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line);margin-left:.5rem}
+section{padding:3.5rem 0}section+section{border-top:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin:0 0 .4rem}
+h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 .5rem}
+.lead{color:var(--mute);font-size:1.08rem;max-width:60ch;margin:0 0 2rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.15rem;
+  display:flex;gap:.95rem;align-items:flex-start;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card img{width:56px;height:56px;border-radius:14px;flex:none;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.card b{display:block;font-size:1.05rem;margin-bottom:.15rem}
+.card p{margin:0 0 .55rem;color:var(--mute);font-size:.94rem}
+.card .links a{font-size:.86rem;margin-right:.8rem}
+.three{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.three div{background:var(--soft);border-radius:18px;padding:1.4rem}
+.three h3{margin:.2rem 0 .4rem;font-size:1.1rem}.three p{margin:0;color:var(--mute)}
+.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:700;font-size:.9rem}
+dl.vcard{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.25rem;margin:0}
+dl.vcard dt{color:var(--mute)}dl.vcard dd{margin:0}
+table.legal{width:100%;border-collapse:collapse;font-size:.95rem}
+table.legal th,table.legal td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line)}
+table.legal th{color:var(--mute);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+footer.site{border-top:1px solid var(--line);padding:2rem 0;color:var(--mute);font-size:.9rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between}
+/* document-pagina's (support / privacy / terms) */
+main.doc{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+main.doc h1{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 .3rem}
+main.doc h2{font-size:1.2rem;margin:2rem 0 .5rem}
+main.doc h3{font-size:1.02rem;margin:1.4rem 0 .3rem}
+main.doc .tag{color:var(--mute);margin:0 0 1.5rem}
+main.doc .lang{display:flex;gap:1rem;font-size:.9rem;margin-bottom:1.5rem}
+main.doc hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+main.doc ul{padding-left:1.15rem}
+.crumbs{font-size:.88rem;color:var(--mute);margin-bottom:1.25rem}.crumbs a{color:var(--mute)}
 </style></head>
-<body>
-<h1>StackPDF — privacyverklaring</h1>
-<p class="tag">Laatst bijgewerkt bij publicatie van deze versie.</p>
+<body><nav class="top"><div class="wrap">
+<a class="brand" href="../index.html"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4d4dc7"/><path d="M20 16h8v14l12-14h10L36 32l15 16H41L28 33v15h-8z" fill="#fff"/></svg><span>Kali Yuga</span></a>
+<ul><li><a href="../index.html#apps">Apps</a></li>
+<li><a href="../index.html#about">What we do</a></li>
+<li><a href="../legal.html">Legal</a></li>
+<li><a href="../index.html#contact">Contact</a></li></ul>
+</div></nav><main class="doc">
+<p class="crumbs"><a href="../index.html">Kali Yuga</a> › StackPDF</p>
+<h1>StackPDF — Privacy Policy</h1>
+<p class="tag">Last updated: 14 September 2026 · Laatst bijgewerkt: 14 september 2026</p>
+<div class="lang"><a href="#en">English</a><a href="#nl">Nederlands</a></div>
+<section id="en">
+<h2>In short</h2>
+<p><b>StackPDF collects nothing.</b> The app works entirely on your iPhone. There is no account,
+no server and no tracking. We do not use analytics, advertising SDKs or third-party trackers.</p>
+<h2>What data does the app process?</h2>
+<p>Everything you enter or add stays in the app's storage on your device. It is not sent
+anywhere and not shared with anyone. If you delete the app, that data is deleted with it.</p>
+<h2>Purchases</h2>
+<p>The one-time unlock is handled by Apple through the App Store. We never see payment details;
+Apple only confirms whether a purchase was made.</p>
+<h2>Permissions the app may ask for</h2>
+<p>If the app asks for access to, for example, your photos or files, that is only to work with
+the material you choose yourself. The app does not read anything beyond what you point it to.</p>
+
+<h2>Who is responsible?</h2>
+<p>This app is provided by <b>Kali Yuga B.V.</b>, registered in Zwolle, The Netherlands, Chamber of Commerce (KvK) no. 42134294.</p>
+<h2>Your rights</h2>
+<p>Because we do not collect personal data, there is nothing on our side to access, correct or
+delete. Data on your device is under your control through the app or by deleting the app.
+Questions? Email <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a>. You also have the right to lodge a complaint
+with your data protection authority (in the Netherlands: the Autoriteit Persoonsgegevens).</p>
+</section>
+<hr>
+<section id="nl">
 <h2>Korte versie</h2>
-<p><b>StackPDF verzamelt niets.</b> De app werkt volledig op je iPhone.
-Er is geen account, geen server en geen tracking.</p>
+<p><b>StackPDF verzamelt niets.</b> De app werkt volledig op je iPhone. Er is geen account, geen
+server en geen tracking. We gebruiken geen analytics, advertentie-SDK's of trackers van derden.</p>
 <h2>Welke gegevens verwerkt de app?</h2>
 <p>Alles wat je invoert of toevoegt blijft in de opslag van de app op je toestel. Het wordt niet
 verstuurd en niet gedeeld. Verwijder je de app, dan verdwijnen die gegevens mee.</p>
@@ -39,8 +116,13 @@ jou gekozen materiaal te kunnen gebruiken. De app leest niets buiten wat je zelf
 
 <h2>Wie is verantwoordelijk?</h2>
 <p>Deze app wordt aangeboden door <b>Kali Yuga B.V.</b>, gevestigd te Zwolle, KvK 42134294.</p>
-<h2>Contact</h2>
-<p>Vragen over privacy? Mail <a href="mailto:thekaliyugans@gmail.com">thekaliyugans@gmail.com</a>. Je hebt daarnaast het recht
-een klacht in te dienen bij de Autoriteit Persoonsgegevens.</p>
-<footer>Kali Yuga · <a href="../index.html">Alle apps</a></footer>
-</body></html>
+<h2>Je rechten</h2>
+<p>Omdat wij geen persoonsgegevens verzamelen, is er aan onze kant niets om in te zien, te
+corrigeren of te verwijderen. Gegevens op je toestel beheer je zelf via de app of door de app te
+verwijderen. Vragen? Mail <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a>. Je hebt daarnaast het recht een
+klacht in te dienen bij de Autoriteit Persoonsgegevens.</p>
+</section></main><footer class="site"><div class="wrap">
+<span>© 2026 Kali Yuga B.V. · 8011 KZ Zwolle, The Netherlands · KvK 42134294</span>
+<span><a href="../legal.html">Legal</a> · <a href="../privacy.html">Website privacy</a>
+· <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a></span>
+</div></footer></body></html>
