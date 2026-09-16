@@ -71,6 +71,23 @@ main.doc ul{padding-left:1.15rem}
 .about img{width:220px;height:220px;border-radius:50%;box-shadow:0 12px 32px rgba(20,20,60,.18)}
 .about .who{margin:.8rem 0 0;font-size:.92rem;color:var(--mute);text-align:center}
 @media(max-width:640px){.about{grid-template-columns:1fr;justify-items:center}.about .note{max-width:none}}
+/* app-pagina */
+a.card{color:inherit;text-decoration:none}a.card:hover{text-decoration:none}
+.card .more{color:var(--accent);font-size:.9rem;font-weight:600}
+.apphead{display:flex;gap:1.25rem;align-items:center;margin:1rem 0 1.5rem}
+.apphead img{width:96px;height:96px;border-radius:22px;box-shadow:0 6px 18px rgba(20,20,60,.18);flex:none}
+.apphead h1{margin:0 0 .3rem}.apphead p{margin:0;color:var(--mute);font-size:1.08rem}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:1.5rem 0 2rem}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;border-radius:18px;border:4px solid #1c1c22;box-shadow:0 10px 30px rgba(20,20,60,.2);display:block}
+.gallery img.poster{border:0}
+.gallery figcaption{font-size:.82rem;color:var(--mute);text-align:center;margin-top:.5rem}
+.apptext h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin:1.6rem 0 .4rem}
+.apptext ul{padding-left:1.1rem}.apptext li{margin:.3rem 0}
+.applinks{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
+.applinks a{padding:.5rem .9rem;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--fg)}
+.fbbox{margin-top:3rem;padding:1.6rem;border-radius:20px;background:var(--soft)}
+.fbbox h2{margin-top:0}
 /* feedbackformulier */
 form.fb{display:grid;gap:1.1rem;max-width:40rem}
 form.fb label{display:block;font-weight:600;margin-bottom:.3rem}
@@ -129,6 +146,7 @@ form.fb .hp{position:absolute;left:-9999px}
 here. The more specific you are, the faster we can do something with it. "The export doesn't work"
 we can't reproduce; "on my iPhone 15, iOS 26.1, tapping Export on a 40-page PDF shows the spinner
 and then nothing" we can fix by Friday.</p>
+
 <form class="fb" id="fb" method="post" action="https://kaliyuga-apps.nl/feedback.php" accept-charset="utf-8">
 <div>
 <label>What is it about?</label>
@@ -138,10 +156,9 @@ and then nothing" we can fix by Friday.</p>
 <label><input type="radio" name="kind" value="bug"> <span>Something's broken<small>It crashes, hangs, or gives the wrong result.</small></span></label>
 </div>
 </div>
-<div><label for="app">Which app?</label>
-<select id="app" name="app" required><option value="">Choose an app…</option><option value="Bandcast">Bandcast</option><option value="Belastingdossier">Belastingdossier</option><option value="Bubblebound">Bubblebound</option><option value="Colorplate">Colorplate</option><option value="DupSweep">DupSweep</option><option value="Fairloom">Fairloom</option><option value="GuestKit">GuestKit</option><option value="JobBinder">JobBinder</option><option value="Keepory">Keepory</option><option value="KinBinder">KinBinder</option><option value="PlanTape">PlanTape</option><option value="StackPDF">StackPDF</option><option value="Stoply">Stoply</option><option value="SunShift">SunShift</option><option value="Textover">Textover</option><option value="Website">This website</option></select></div>
+<div><label for="app">Which app?</label><select id="app" name="app" required><option value="">Choose an app…</option><option value="Bandcast">Bandcast</option><option value="Belastingdossier">Belastingdossier</option><option value="Bubblebound">Bubblebound</option><option value="Colorplate">Colorplate</option><option value="DupSweep">DupSweep</option><option value="Fairloom">Fairloom</option><option value="GuestKit">GuestKit</option><option value="JobBinder">JobBinder</option><option value="Keepory">Keepory</option><option value="KinBinder">KinBinder</option><option value="PlanTape">PlanTape</option><option value="StackPDF">StackPDF</option><option value="Stoply">Stoply</option><option value="SunShift">SunShift</option><option value="Textover">Textover</option><option value="Website">This website</option></select></div>
 <div><label for="msg">What happened, or what would you like?<span class="hint">Be as concrete as you can: which screen, which button, what you expected, what you got.</span></label>
-<textarea id="msg" name="message" required maxlength="4000" placeholder="For example: In Keepory, when I add a second photo to an item, the first one disappears. I expected both to stay."></textarea></div>
+<textarea id="msg" name="message" required maxlength="4000" placeholder="For example: when I add a second photo to an item, the first one disappears. I expected both to stay."></textarea></div>
 <div class="only-bug"><label for="device">Your iPhone and iOS version<span class="hint">Settings → General → About. For example: iPhone 14 Pro, iOS 26.1.</span></label>
 <input type="text" id="device" name="device" maxlength="120" placeholder="iPhone 14 Pro, iOS 26.1"></div>
 <div class="only-bug"><label for="where">Where exactly does it go wrong?<span class="hint">The steps you took, in order, up to the moment it stops working.</span></label>
@@ -151,15 +168,15 @@ and then nothing" we can fix by Friday.</p>
 <div class="hp"><label>Leave this empty<input type="text" name="website_url" tabindex="-1" autocomplete="off"></label></div>
 <div><button class="btn" type="submit">Send it</button></div>
 </form>
-<p class="tag" style="margin-top:1.5rem">Prefer email? <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a> works just as well.
-What you send here goes to us and nowhere else; see the
-<a href="privacy.html">website privacy statement</a>.</p>
 <script>
 (function(){var f=document.getElementById('fb');function u(){f.classList.toggle('is-bug',f.kind.value==='bug');}
 f.addEventListener('change',u);u();
-var a=new URLSearchParams(location.search).get('app');if(a){var s=document.getElementById('app');
+var a=new URLSearchParams(location.search).get('app');var s=document.getElementById('app');if(a&&s){
 for(var i=0;i<s.options.length;i++){if(s.options[i].value.toLowerCase()===a.toLowerCase()){s.selectedIndex=i;break;}}}})();
-</script></main><footer class="site"><div class="wrap">
+</script>
+<p class="tag" style="margin-top:1.5rem">Prefer email? <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a> works just as well.
+What you send here goes to us and nowhere else; see the
+<a href="privacy.html">website privacy statement</a>.</p></main><footer class="site"><div class="wrap">
 <span>© 2026 Kali Yuga B.V. · 8011 KZ Zwolle, The Netherlands · KvK 42134294</span>
 <span><a href="legal.html">Legal</a> · <a href="privacy.html">Website privacy</a>
 · <a href="mailto:info@kaliyuga-apps.nl">info@kaliyuga-apps.nl</a></span>

@@ -71,6 +71,23 @@ main.doc ul{padding-left:1.15rem}
 .about img{width:220px;height:220px;border-radius:50%;box-shadow:0 12px 32px rgba(20,20,60,.18)}
 .about .who{margin:.8rem 0 0;font-size:.92rem;color:var(--mute);text-align:center}
 @media(max-width:640px){.about{grid-template-columns:1fr;justify-items:center}.about .note{max-width:none}}
+/* app-pagina */
+a.card{color:inherit;text-decoration:none}a.card:hover{text-decoration:none}
+.card .more{color:var(--accent);font-size:.9rem;font-weight:600}
+.apphead{display:flex;gap:1.25rem;align-items:center;margin:1rem 0 1.5rem}
+.apphead img{width:96px;height:96px;border-radius:22px;box-shadow:0 6px 18px rgba(20,20,60,.18);flex:none}
+.apphead h1{margin:0 0 .3rem}.apphead p{margin:0;color:var(--mute);font-size:1.08rem}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:1.5rem 0 2rem}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;border-radius:18px;border:4px solid #1c1c22;box-shadow:0 10px 30px rgba(20,20,60,.2);display:block}
+.gallery img.poster{border:0}
+.gallery figcaption{font-size:.82rem;color:var(--mute);text-align:center;margin-top:.5rem}
+.apptext h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin:1.6rem 0 .4rem}
+.apptext ul{padding-left:1.1rem}.apptext li{margin:.3rem 0}
+.applinks{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
+.applinks a{padding:.5rem .9rem;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--fg)}
+.fbbox{margin-top:3rem;padding:1.6rem;border-radius:20px;background:var(--soft)}
+.fbbox h2{margin-top:0}
 /* feedbackformulier */
 form.fb{display:grid;gap:1.1rem;max-width:40rem}
 form.fb label{display:block;font-weight:600;margin-bottom:.3rem}
@@ -141,7 +158,7 @@ and small things tend to get fixed in the next update.</p>
   
 </ul>
 <h2>An idea, or something that should work differently?</h2>
-<p><a href="../feedback.html?app=Fairloom">Use the feedback box</a>. Ideas, gripes and bug reports all
+<p><a href="index.html#feedback">Use the feedback box on the Fairloom page</a>. Ideas, gripes and bug reports all
 welcome; the more specific, the better.</p>
 <h2>Privacy and terms</h2>
 <p>See the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms of use</a>.</p>
