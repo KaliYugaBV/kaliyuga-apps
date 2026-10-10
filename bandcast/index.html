@@ -152,7 +152,7 @@ form.fb .hp{position:absolute;left:-9999px}
 <div class="apphead"><img src="icon.png?v=54319d2c" alt="" width="96" height="96"><div><h1>Bandcast</h1><p>Plays the music on your phone through your Sonos speakers, with a proper EQ per room.</p></div></div>
 <div class="applinks"><span style="color:var(--mute);font-size:.9rem;align-self:center">Coming to the App Store</span><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#feedback">Feedback</a></div>
 <p class="priceline">iPhone: free to try, one-time unlock €3,99, no subscription</p>
-<div class="gallery"><figure><img src="shot-1.jpg?v=caee70cf" alt="Bandcast screenshot 1" loading="lazy"><figcaption>Home</figcaption></figure></div>
+<div class="gallery"><figure><img src="shot-1.jpg?v=91b9e9d6" alt="Bandcast screenshot 1" loading="lazy"><figcaption>Home</figcaption></figure><figure><img src="shot-2.jpg?v=f3aed7ed" alt="Bandcast screenshot 2" loading="lazy"><figcaption>Eq presets</figcaption></figure><figure><img src="shot-3.jpg?v=98acba9a" alt="Bandcast screenshot 3" loading="lazy"><figcaption>No speakers</figcaption></figure><figure><img src="shot-4.jpg?v=6ddd03f3" alt="Bandcast screenshot 4" loading="lazy"><figcaption>Upnp off</figcaption></figure></div>
 <div class="apptext"><p>Bandcast turns your iPhone into a proper remote for the speakers you already own: it finds them on your wifi, plays your own music on them, and — with the one-time unlock — lets you tune every speaker the way you want it.</p>
 <p>Everything happens on your own network, straight between your iPhone, your speakers and (if you have one) your own music server. No account, no cloud, no subscription.</p>
 <h3>What It Does</h3>
@@ -167,16 +167,18 @@ form.fb .hp{position:absolute;left:-9999px}
 <h3>With The One-time Unlock</h3>
 <ul>
 <li>Bass, treble, loudness and height per speaker</li>
-<li>The ten-band graphic equalizer</li>
+<li>The ten-band equalizer applied to the music you play from your iPhone</li>
 <li>Unlimited presets of your own (one is free)</li>
 <li>Setups the official app will not make: stereo-pair any two speakers, bond mismatched surrounds, a sub, and separate front left/right speakers — and capture a restore point first so you can put the old arrangement back</li>
 </ul>
 <h3>Worth Knowing Before You Buy</h3>
 <ul>
 <li>Your iPhone and your speakers have to be on the same wifi. Bandcast does not reach your speakers from outside your home, and it needs permission for the local network.</li>
+<li>Bandcast controls your speakers over UPnP. Sonos has it switched on by default; if you switched it off (Sonos app: Account → Privacy &amp; Security → UPnP), Bandcast finds your speakers but cannot control them, and tells you so.</li>
 <li>Music from your speakers&#x27; own library or from your music server is fetched by the speaker itself, so it keeps playing when your iPhone locks.</li>
 <li>Files streamed from the iPhone itself work differently: your phone is the server, so Bandcast must stay open in the foreground (iOS does not let a phone serve audio in the background). The screen is kept awake while it does.</li>
-<li>The ten-band equalizer re-renders the file Bandcast is serving, so it applies to music you play from your iPhone — not to a stream the speaker fetched by itself.</li>
+<li>The ten-band equalizer re-renders the file Bandcast is serving, so it applies to music you play from your iPhone — not to a stream the speaker fetched by itself. It is applied to the track that is playing; the next track in your queue starts without it.</li>
+<li>Raising a band makes a track louder than a file can hold, so Bandcast turns that track down just far enough to keep it free of distortion, and tells you by how much. Turn the speaker up a little if you miss it.</li>
 <li>Speakers refuse audio above a 48 kHz sample rate; Bandcast flags those tracks before you queue them.</li>
 <li>Adding a new shared music folder is the one thing the local interface cannot do. Bandcast shows you where to do it and then re-indexes the library for you.</li>
 </ul>
